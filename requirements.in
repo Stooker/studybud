@@ -1,14 +1,4 @@
-asgiref
-build
-click
-colorama
 Django
 django-cors-headers
 djangorestframework
-packaging
-Pillow
-pip-tools
-pyproject_hooks
-pytz
-sqlparse
-tzdata
+
