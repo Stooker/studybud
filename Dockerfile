@@ -1,13 +1,12 @@
-FROM python:3
+FROM python:3.10
 WORKDIR /app
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN pip3 install --upgrade pip
 COPY requirements.txt /app
-RUN pip3 install -r requirements.txt /app/pip_cache
+RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . /app
-
-EXPOSE 3000
-CMD["manage.py", "runserver"]
+#ENTRYPOINT ["python3"]
+#EXPOSE 8000
+#CMD ["manage.py", "runserver"]
